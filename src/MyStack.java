@@ -18,7 +18,7 @@ public class MyStack<T> {
 
     public void push(T item) {
         if (isFull()) {
-            throw new StackOverflowError();
+            reCapacity(size+(size/2 + 1));  //Добавил реализацию увеличения размера стека. 3 задание.
         }
         list[size] = item;
         size++;
